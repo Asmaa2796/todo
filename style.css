@@ -1,0 +1,152 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F4F9;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Regular.ttf);
+}
+
+/* todo app */
+.todo-app {
+    border: 1px solid #ddd;
+    padding: 40px 20px;
+    background-color: #FEFEFE;
+    border-radius: 15px;
+    max-width: 90%;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .2);
+    margin: 20px auto;
+}
+.todo-app h4 {margin-bottom: 20px;color: #0c3d65;font-weight: bold;}
+.todo-app h4 img {width: 30px;}
+
+/* tasks */
+.add-task {
+    position: relative;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    background-color: #f6f6f6;
+    margin-bottom: 20px;
+    height: 45px;
+}
+.add-task input {width: 80%;padding: 0px 15px;border: none;background-color: transparent;height: 100%;font-size: small;}
+.add-task input:focus,.add-task button:focus {outline: none;}
+.add-task input::placeholder {font-size: small;}
+.add-task button {
+    position: absolute;
+    background-color: #ff6347;
+    font-size: small;
+    height: 80%;
+    font-weight: bold;
+    color: #fff;
+    border: #fff;
+    padding: 6px 22px;
+    cursor: pointer;
+    border: none;
+    right: 5px;
+    top: 5px;
+    border-radius: 25px;
+}
+
+.tasks {padding: 0;margin: 0;}
+.tasks li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: 12px 8px 12px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .3s ease-in-out;
+}
+.tasks li .text {
+    width: 85%;
+    word-wrap: break-word;
+}
+
+.tasks li::before {
+    background-image: url(./images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    top: 13px;
+    left: 0;
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    transition: all .3s ease-in-out;
+}
+.tasks li.checked {
+    color: #888;
+    text-decoration: line-through;
+}
+.tasks li.checked::before {
+    background-image: url(./images/checked.png);
+}
+
+.tasks li .delete {
+    background: #EF5350;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 21px;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-top: 3px;
+    position: absolute;
+    right: 0px;
+    top: 12px;
+}
+
+/* no tasks */
+.no-tasks {text-align: center;padding: 20px;}
+.no-tasks img {display: block;margin: 10px auto;}
+.no-tasks b {display: block;color: #888;}
+
+/* count */
+.actions {display: none;transition: all .3s ease-in-out;}
+.count {
+    display: flex;
+    justify-content: space-between;
+}
+
+.count div {color: #555;font-size: 14px;}
+.count div span {
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.count div span.tasksCount {background-color: steelblue;}
+.count div span.finishedTasks {background-color: forestgreen;}
+
+.count button {
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    line-height: 20px;
+    padding: 6px 15px;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, .2);
+}
+.count button:focus {outline: none;}
+.count button img {width: 14px;}
+.count .delAll {background-color: #e53935;}
+.count .finAll {background-color: goldenrod;}
+
+/* copyright */
+.copyright {text-align: center;font-size: small;color: #888;margin: 20px 0;}
+
+/* media */
+@media (width <= 567px) {
+    .add-task input {width: 74%;}
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0c3d65" />
+    <link rel="shortcut icon" href="images/checklist.png" type="image/x-icon">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo List</title>
+</head>
+<body>
+    
+    <div class="todo-app">
+        <h4>Todo-List <img src="images/icon.png" alt=""></h4>
+        <div class="add-task">
+            <input type="text" class="add-input" placeholder="Add new task">
+            <button class="add">Add</button>
+        </div>
+
+        <!-- tasks content -->
+        <div class="tasks-content">
+            <!-- tasks -->
+            <ul class="tasks"></ul>
+
+            <!-- no tasks -->
+            <div class="no-tasks">
+                <img src="images/notasks.gif" alt="">
+                <b>No tasks yet</b>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <hr>
+            <div class="count">
+                <div>Tasks count <span class="tasksCount">0</span></div>
+                <div>Finished tasks <span class="finishedTasks">0</span></div>
+            </div>
+            <hr>
+            <div class="count">
+                <button class="delAll">Delete all <img src="images/recycle-bin.png" alt=""></button>
+                <button class="finAll">Finish all <img src="images/check.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">All rights reserved &copy; 2023 Asmaa Saad</div>
+
+    <script src="sweetalert2.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
